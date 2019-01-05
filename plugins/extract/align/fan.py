@@ -60,9 +60,9 @@ class Align(Aligner):
                 break
             image = item["image"][:, :, ::-1].copy()
 
-            logger.trace("Algning faces")
+            logger.trace("Aligning faces")
             item["landmarks"] = self.process_landmarks(image, item["detected_faces"])
-            logger.trace("Algned faces: %s", item["landmarks"])
+            logger.trace("Aligned faces: %s", item["landmarks"])
 
             self.finalize(item)
         logger.debug("Completed Align")
